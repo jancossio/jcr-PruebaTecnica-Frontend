@@ -1,0 +1,14 @@
+<div class="row d-flex justify-content-center">
+    <h1>Series</h1>
+    @for (serie of series; track $index) {
+        <div class="card" style="width: 300px">
+            <img class="card-img-top" src={{serie.poster}} alt="Card image cap" >
+            <div class="card-body">
+              <h5 class="card-title">{{serie.title}}</h5>
+              <h6 class="card-title">{{serie.originalTitle}}</h6>
+              <div class="d-flex justify-content-center">
+                <!-- <a routerLink="/series/{{serie.id}}" class="btn btn-warning btn-sm">See more</a> -->
+              </div>
+            </div>
+          </div>
+    }

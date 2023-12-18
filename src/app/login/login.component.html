@@ -1,0 +1,27 @@
+<form [formGroup]="userForm">
+
+    <div class="container-md d-flex align-items-center justify-content-center">
+      <div class="row">
+          <div class="col-12 text-center border-2 py-4" id="titulo">
+            <h1>Registrate:</h1>
+          </div>
+            <div class="col-3 mt-4 mb-2 px-2">
+              <p class="text-end">Username:</p>
+            </div>
+            <div class="col-8 mt-4">
+                <input id="id" type="number" formControlName="id" class="form-control" placeholder="loqsea@gmail.com">
+                <span *ngIf="userForm.status=='INVALID'" class="text-danger">The ID is required.</span>
+            </div>
+            <div class="col-3 mt-4 mb-2 px-2">
+              <p class="text-end">Password:</p>
+            </div>
+            <div class="col-8 mt-4 mb-2">
+                <input id="name" type="text" formControlName="name" class="form-control" placeholder="###">
+                <span *ngIf="userForm.status=='INVALID'" class="text-danger">A name is required.</span>
+            <div class="col-12 mt-4 mb-4 text-center">
+              <button class="btn btn-primary rounded border-0" type="submit" [disabled]="!userForm.valid" (click)="login()">Acceder</button>
+            </div>
+            </div>
+        </div>
+    </div>
+  </form>
